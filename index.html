@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clevenger Kenneth Law Firm | Trusted Legal Representation</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="top-bar bg-navy text-white">
+            <div class="container top-bar-content">
+                <div class="contact-info">
+                    <span><i class="fa-solid fa-envelope"></i> <a href="mailto:clevengerkenneth3@gmail.com" class="text-white">clevengerkenneth3@gmail.com</a></span>
+                    <span><i class="fa-solid fa-phone"></i> <a href="tel:+12053776372" class="text-white">Intl: +1 (205) 377-6372</a></span>
+                    <span><i class="fa-solid fa-phone"></i> <a href="tel:+447346507855" class="text-white">UK: +44 7346 507855</a></span>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar container">
+            <a href="index.html" class="logo">
+                <h1 class="text-navy">Clevenger Kenneth</h1>
+                <span class="text-gold">Law Firm</span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="attorneys.html">Attorneys</a>
+                <a href="practice-areas.html">Practice Areas</a>
+                <a href="case-results.html">Case Results</a>
+                <a href="news.html">News</a>
+                <a href="testimonials.html">Testimonials</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html" class="btn btn-primary text-white" style="color: white !important;">Schedule Consultation</a>
+            </div>
+
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars" id="menuIcon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title text-gold">Trusted Legal Representation. Proven Results.</h1>
+            <p class="hero-subtitle text-white">
+                Clevenger Kenneth Law Firm delivers strategic legal counsel, personalized client service, and dedicated representation for individuals, families, and businesses.
+            </p>
+            <div class="hero-buttons">
+                <a href="contact.html" class="btn btn-primary">Schedule Consultation</a>
+                <a href="contact.html" class="btn btn-outline">Contact Our Team</a>
+            </div>
+            <div class="hero-contact mt-5 text-white">
+                <p><strong>Emergency/24-7 Support:</strong> <a href="tel:+12053776372" class="text-white">+1 (205) 377-6372</a> | <strong>Email:</strong> <a href="mailto:clevengerkenneth3@gmail.com" class="text-white">clevengerkenneth3@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Legal News Ticker (API) -->
+    <section class="bg-navy text-white" style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <div class="container" style="display: flex; align-items: center;">
+            <div style="background-color: var(--gold); padding: 0.3rem 1rem; border-radius: 4px; font-weight: bold; margin-right: 1.5rem; white-space: nowrap;">
+                <i class="fa-solid fa-satellite-dish blink"></i> LEGAL NEWS
+            </div>
+            <div style="overflow: hidden; white-space: nowrap; width: 100%;">
+                <div id="home-news-ticker" style="display: inline-block;">
+                    Fetching latest global court cases...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Markets Ticker (API) -->
+    <section class="bg-charcoal text-white" style="padding: 1rem 0; border-bottom: 2px solid var(--gold);">
+        <div class="container" style="display: flex; align-items: center;">
+            <div style="background-color: #2b2b2b; color: var(--gold); border: 1px solid var(--gold); padding: 0.3rem 1rem; border-radius: 4px; font-weight: bold; margin-right: 1.5rem; white-space: nowrap;">
+                <i class="fa-solid fa-chart-line blink"></i> MARKETS & REAL ESTATE
+            </div>
+            <div style="overflow: hidden; white-space: nowrap; width: 100%;">
+                <div id="finance-news-ticker" style="display: inline-block;">
+                    Fetching live financial updates...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section why-choose-us bg-light">
+        <div class="container">
+            <div class="text-center section-header">
+                <h2 class="text-navy">Why Choose Us</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid grid-cols-3">
+                <div class="feature-card">
+                    <i class="fa-solid fa-scale-balanced text-gold mb-3"></i>
+                    <h3>Experienced Legal Counsel</h3>
+                    <p class="mt-2">Decades of combined experience navigating complex legal systems.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-users text-gold mb-3"></i>
+                    <h3>Personalized Attention</h3>
+                    <p class="mt-2">Every case is unique. We provide tailored strategies for your specific needs.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-chess-knight text-gold mb-3"></i>
+                    <h3>Strategic Legal Solutions</h3>
+                    <p class="mt-2">Innovative approaches to resolve disputes efficiently and favorably.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-file-contract text-gold mb-3"></i>
+                    <h3>Transparent Communication</h3>
+                    <p class="mt-2">Clear, honest updates on your case status at every step.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-handshake-angle text-gold mb-3"></i>
+                    <h3>Client-Focused Representation</h3>
+                    <p class="mt-2">Your best interests remain our singular priority.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-user-secret text-gold mb-3"></i>
+                    <h3>Confidential Consultations</h3>
+                    <p class="mt-2">Absolute discretion in all legal matters.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Firm Statistics Section -->
+    <section class="section stats-section bg-navy text-white text-center">
+        <div class="container grid grid-cols-4">
+            <div class="stat-item">
+                <h3 class="text-gold counter">25+</h3>
+                <p>Years of Experience</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="text-gold counter">10,000+</h3>
+                <p>Cases Handled</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="text-gold counter">15,000+</h3>
+                <p>Consultations Completed</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="text-gold counter">98%</h3>
+                <p>Client Satisfaction Rate</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Motivation Section -->
+    <section class="section bg-gold text-navy text-center" style="background-color: var(--gold); padding: 3rem 0;">
+        <div class="container">
+            <i class="fa-solid fa-quote-left mb-3" style="font-size: 2.5rem; color: var(--navy); opacity: 0.5;"></i>
+            <h2 style="font-family: var(--font-heading); font-size: 2rem; font-style: italic; max-width: 800px; margin: 0 auto;">"Injustice anywhere is a threat to justice everywhere. We stand as the shield for your rights and the sword for your future."</h2>
+            <p class="mt-3" style="font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">- Clevenger Kenneth</p>
+        </div>
+    </section>
+
+    <!-- Practice Areas Section -->
+    <section class="section practice-areas">
+        <div class="container">
+            <div class="text-center section-header">
+                <h2 class="text-navy">Our Practice Areas</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid grid-cols-3">
+                <div class="practice-card">
+                    <i class="fa-solid fa-gavel practice-icon"></i>
+                    <h3>Civil Litigation</h3>
+                    <p>Expert representation and counsel tailored to your specific circumstances in civil litigation.</p>
+                    <a href="practice-areas.html" class="learn-more">Learn More <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+                <div class="practice-card">
+                    <i class="fa-solid fa-people-roof practice-icon"></i>
+                    <h3>Family Law</h3>
+                    <p>Expert representation and counsel tailored to your specific circumstances in family law.</p>
+                    <a href="practice-areas.html" class="learn-more">Learn More <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+                <div class="practice-card">
+                    <i class="fa-solid fa-briefcase practice-icon"></i>
+                    <h3>Business Law</h3>
+                    <p>Expert representation and counsel tailored to your specific circumstances in business law.</p>
+                    <a href="practice-areas.html" class="learn-more">Learn More <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="practice-areas.html" class="btn btn-outline">View All Practice Areas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About The Firm Section -->
+    <section class="section about-firm bg-light">
+        <div class="container grid about-firm-grid" style="grid-template-columns: 1fr 1fr; align-items: center;">
+            <div class="about-content">
+                <h2 class="text-navy">Commitment to Excellence</h2>
+                <div class="divider" style="margin: 1rem 0;"></div>
+                <p class="mt-3 mb-3">Clevenger Kenneth Law Firm was founded on a bedrock of professional ethics, unwavering client advocacy, and a commitment to personalized legal strategies. We believe in building long-term client relationships based on trust, transparency, and consistent results.</p>
+                <p class="mb-5">Our dedicated team is deeply involved in the community, striving to provide exceptional representation that protects your rights and secures your future.</p>
+                <a href="about.html" class="btn btn-primary">Read Our Full Profile</a>
+            </div>
+            <div class="about-image placeholder-img">
+                <!-- Image Placeholder loaded via CSS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Attorney Profile Preview -->
+    <section class="section attorney-preview bg-navy text-white">
+        <div class="container grid attorney-preview-grid" style="grid-template-columns: 1fr 2fr; align-items: center;">
+            <div class="attorney-img placeholder-img">
+                 <!-- Headshot placeholder loaded via CSS -->
+            </div>
+            <div class="attorney-info">
+                <h2 class="text-gold">Clevenger Kenneth</h2>
+                <h4 class="text-white mt-2">Lead Attorney</h4>
+                <p class="mt-3 mb-3">A distinguished legal professional known for strategic acumen and fierce client advocacy. Specializing in complex litigation and comprehensive corporate counsel.</p>
+                <ul class="mb-5">
+                    <li><i class="fa-solid fa-circle-check text-gold"></i> J.D., Harvard Law School</li>
+                    <li class="mt-2"><i class="fa-solid fa-circle-check text-gold"></i> Top 100 Trial Lawyers</li>
+                </ul>
+                <a href="attorneys.html" class="btn btn-outline">View Full Profile</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Results Preview -->
+    <section class="section text-center bg-light">
+        <div class="container">
+            <h2 class="text-navy">Representative Case Results</h2>
+            <div class="divider"></div>
+            <p class="mt-3 mb-5 disclaimer"><em>*Prior results do not guarantee a similar outcome.</em></p>
+            <div class="grid grid-cols-3">
+                 <div class="result-card">
+                     <h3 class="text-gold">$2.5M</h3>
+                     <p>Business Dispute Settlement</p>
+                 </div>
+                 <div class="result-card">
+                     <h3 class="text-gold">$4.1M</h3>
+                     <p>Civil Litigation Verdict</p>
+                 </div>
+                 <div class="result-card">
+                     <h3 class="text-gold">Favorable Settlement</h3>
+                     <p>Complex Family Law Dispute</p>
+                 </div>
+            </div>
+            <div class="mt-5">
+                <a href="case-results.html" class="btn btn-primary">View All Results</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-navy text-white section" style="padding-bottom: 2rem;">
+        <div class="container grid grid-cols-4">
+            <div class="footer-col">
+                <a href="index.html" class="logo text-white">
+                    <h2 class="text-gold" style="font-size: 1.2rem; margin-bottom: 0;">Clevenger Kenneth</h2>
+                    <span style="font-size: 0.8rem; letter-spacing: 1px;">Law Firm</span>
+                </a>
+                <p class="mt-3 mb-3">Trusted legal representation with proven results. Dedicated to individuals, families, and businesses worldwide.</p>
+                <div class="social-links mt-3">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="text-gold" style="font-size: 1.2rem;">Practice Areas</h3>
+                <ul>
+                    <li><a href="practice-areas.html">Civil Litigation</a></li>
+                    <li><a href="practice-areas.html">Family Law</a></li>
+                    <li><a href="practice-areas.html">Business Law</a></li>
+                    <li><a href="practice-areas.html">Real Estate Law</a></li>
+                    <li><a href="practice-areas.html">Estate Planning</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="text-gold" style="font-size: 1.2rem;">Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="attorneys.html">Our Attorneys</a></li>
+                    <li><a href="case-results.html">Case Results</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="text-gold" style="font-size: 1.2rem;">Contact</h3>
+                <ul class="contact-info-footer">
+                    <li><i class="fa-solid fa-envelope mt-2"></i> <a href="mailto:clevengerkenneth3@gmail.com" class="text-white">clevengerkenneth3@gmail.com</a></li>
+                    <li><i class="fa-solid fa-phone mt-2"></i> <a href="tel:+12053776372" class="text-white">Intl: +1 (205) 377-6372</a></li>
+                    <li><i class="fa-solid fa-phone mt-2"></i> <a href="tel:+447346507855" class="text-white">UK: +44 7346 507855</a></li>
+                        <li><i class="fa-solid fa-location-dot text-gold mt-1"></i> <span>79 Jedburgh Road<br>LERWICK<br>ZE1 8HQ</span></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom container text-center mt-5">
+            <p>&copy; 2026 Clevenger Kenneth Law Firm. All rights reserved.</p>
+            <div class="compliance-links mt-2">
+                <a href="#">Privacy Policy</a> | 
+                <a href="#">Terms of Use</a> | 
+                <a href="#">Cookie Policy</a> | 
+                <a href="#">Attorney Advertising Disclaimer</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const menuIcon = document.getElementById('menuIcon');
+            
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                navLinks.style.display = 'flex';
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        }
+
+        // Live News Ticker for Homepage
+        if(document.getElementById('home-news-ticker')) {
+            const cacheBuster = new Date().getTime();
+            const NEWS_API_URL = "https://api.rss2json.com/v1/api.json?rss_url=https://www.jurist.org/news/feed/&t=" + cacheBuster;
+            fetch(NEWS_API_URL)
+                .then(response => response.json())
+                .then(data => {
+                    if(data && data.items) {
+                        const newsTitles = data.items.slice(0, 5).map(item => `<a href="${item.link}" target="_blank" class="text-white" style="margin-right: 3rem;">&#x2022; ${item.title}</a>`).join('');
+                        
+                        // Create a marquee effect
+                        document.getElementById('home-news-ticker').innerHTML = `<marquee scrollamount="5" style="color: white;">${newsTitles}</marquee>`;
+                    }
+                })
+                .catch(err => {
+                    document.getElementById('home-news-ticker').innerHTML = "Unable to load live news at this time.";
+                });
+        }
+
+        // Live Real Estate Market Ticker
+        if(document.getElementById('finance-news-ticker')) {
+            const cacheBuster = new Date().getTime();
+            const REAL_ESTATE_API_URL = "https://api.rss2json.com/v1/api.json?rss_url=https://therealdeal.com/feed/&t=" + cacheBuster; 
+            fetch(REAL_ESTATE_API_URL)
+                .then(response => response.json())
+                .then(data => {
+                    if(data && data.items) {
+                        const financeTitles = data.items.slice(0, 5).map(item => `<a href="${item.link}" target="_blank" class="text-white" style="margin-right: 3rem;">&#x2022; <span style="color: var(--gold);">[REAL ESTATE]</span> ${item.title}</a>`).join('');
+                        
+                        document.getElementById('finance-news-ticker').innerHTML = `<marquee scrollamount="6" style="color: white;">${financeTitles}</marquee>`;
+                    }
+                })
+                .catch(err => {
+                    document.getElementById('finance-news-ticker').innerHTML = "Unable to load real estate market updates at this time.";
+                });
+        }
+
+        // Chat Widget Logic
+        function toggleChat() {
+            const chatBox = document.getElementById('chatBox');
+            chatBox.style.display = chatBox.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function handleChatSubmit(e) {
+            e.preventDefault();
+            const input = document.getElementById('chatInput').value;
+            if(!input) return;
+            const body = encodeURIComponent("Chat inquiry:\\n\\n" + input + "\\n\\nPlease reply to this inquiry.");
+            window.location.href = "mailto:clevengerkenneth3@gmail.com?subject=New FAQ Chat Inquiry&body=" + body;
+            document.getElementById('chatInput').value = '';
+            toggleChat();
+        }
+    </script>
+
+    <!-- Chat Widget HTML -->
+    <div class="chat-widget">
+        <button class="chat-toggle" onclick="toggleChat()">
+            <i class="fa-solid fa-comments"></i>
+        </button>
+        <div class="chat-box" id="chatBox">
+            <div class="chat-header">
+                <h4>Firm Support</h4>
+                <button class="chat-close" onclick="toggleChat()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <div class="chat-message system">
+                    Hello! Do you have any questions about our services or need to book a consultation? Send us a message and we'll reply via email.
+                </div>
+            </div>
+            <form class="chat-input" onsubmit="handleChatSubmit(event)">
+                <input type="text" id="chatInput" placeholder="Type your question..." required>
+                <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
